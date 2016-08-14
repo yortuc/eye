@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bMG-MI-IOr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2f-y9-PXL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K2f-y9-PXL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="3sW-vM-hHi"/>
+                            <constraint firstItem="K2f-y9-PXL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Caj-An-TPq"/>
+                            <constraint firstAttribute="trailing" secondItem="K2f-y9-PXL" secondAttribute="trailing" id="QSa-0i-zNs"/>
+                            <constraint firstItem="K2f-y9-PXL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kNa-Ro-bth"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="K2f-y9-PXL" id="i6j-3w-pYr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522.5" y="432.5"/>
+        </scene>
+        <!--Take Photo View Controller-->
+        <scene sceneID="Xwd-tp-dmf">
+            <objects>
+                <viewController id="bMG-MI-IOr" customClass="TakePhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MAP-4O-bhc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mp9-S1-919"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qdf-vM-sRj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-rj-ka3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="616"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGF-JE-JDy">
+                                <rect key="frame" x="147" y="624" width="80" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="H3p-r4-IF3"/>
+                                    <constraint firstAttribute="width" constant="80" id="e9N-Yz-8E5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="take photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="bMG-MI-IOr" eventType="touchUpInside" id="5e9-wL-7fg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cGF-JE-JDy" firstAttribute="top" secondItem="MAP-4O-bhc" secondAttribute="bottom" constant="579" id="ZAQ-kM-R3d"/>
+                            <constraint firstItem="FSX-rj-ka3" firstAttribute="top" secondItem="qdf-vM-sRj" secondAttribute="top" id="c4f-No-4Zx"/>
+                            <constraint firstItem="FSX-rj-ka3" firstAttribute="leading" secondItem="qdf-vM-sRj" secondAttribute="leading" id="fa0-y8-fAi"/>
+                            <constraint firstAttribute="trailing" secondItem="FSX-rj-ka3" secondAttribute="trailing" id="gVM-Ml-WP6"/>
+                            <constraint firstItem="cGF-JE-JDy" firstAttribute="top" secondItem="FSX-rj-ka3" secondAttribute="bottom" constant="8" id="hDn-hu-h6r"/>
+                            <constraint firstItem="cGF-JE-JDy" firstAttribute="centerX" secondItem="FSX-rj-ka3" secondAttribute="centerX" id="kIx-Mq-20v"/>
+                            <constraint firstAttribute="bottom" secondItem="cGF-JE-JDy" secondAttribute="bottom" constant="20" symbolic="YES" id="taz-6K-3hV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZAQ-kM-R3d"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="FSX-rj-ka3" id="Etb-2Y-DbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TxM-Rt-dvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.5" y="432.5"/>
+        </scene>
+    </scenes>
+</document>
