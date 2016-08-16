@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bMG-MI-IOr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ngl-B9-5aW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -91,5 +91,93 @@
             </objects>
             <point key="canvasLocation" x="1024.5" y="432.5"/>
         </scene>
+        <!--Capture Video View Controller-->
+        <scene sceneID="vFD-Qa-tSE">
+            <objects>
+                <viewController id="MAM-qc-gxE" customClass="CaptureVideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="svy-qK-Yel"/>
+                        <viewControllerLayoutGuide type="bottom" id="5FL-qe-8hI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FT2-RQ-TCb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La0-Z2-UW5">
+                                <rect key="frame" x="163" y="609" width="49" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fUR-lM-h7i"/>
+                                </constraints>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="record:" destination="MAM-qc-gxE" eventType="touchUpInside" id="d5e-rg-oJR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lena" translatesAutoresizingMaskIntoConstraints="NO" id="1VG-Az-u5v">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.92156862750000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1VG-Az-u5v" firstAttribute="leading" secondItem="FT2-RQ-TCb" secondAttribute="leading" id="6nf-FN-NwP"/>
+                            <constraint firstItem="5FL-qe-8hI" firstAttribute="top" secondItem="La0-Z2-UW5" secondAttribute="bottom" constant="8" symbolic="YES" id="Cu6-iS-pel"/>
+                            <constraint firstAttribute="trailing" secondItem="1VG-Az-u5v" secondAttribute="trailing" id="Qea-Ce-j8k"/>
+                            <constraint firstItem="La0-Z2-UW5" firstAttribute="centerX" secondItem="1VG-Az-u5v" secondAttribute="centerX" id="RCS-lk-5YF"/>
+                            <constraint firstItem="La0-Z2-UW5" firstAttribute="centerX" secondItem="FT2-RQ-TCb" secondAttribute="centerX" id="ZP5-GR-IxF"/>
+                            <constraint firstItem="La0-Z2-UW5" firstAttribute="top" secondItem="1VG-Az-u5v" secondAttribute="bottom" constant="10" id="e4v-yH-lSv"/>
+                            <constraint firstItem="1VG-Az-u5v" firstAttribute="top" secondItem="FT2-RQ-TCb" secondAttribute="top" id="j3v-rg-hav"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RCS-lk-5YF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="btnRecord" destination="La0-Z2-UW5" id="FAE-3f-lMm"/>
+                        <outlet property="imageView" destination="1VG-Az-u5v" id="ugh-wO-jCq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fH-Ef-OQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1552.5" y="432.5"/>
+        </scene>
+        <!--Video Filter-->
+        <scene sceneID="96f-q3-uI7">
+            <objects>
+                <viewController id="Ngl-B9-5aW" customClass="RTVideoFilter" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OIA-eK-TsT"/>
+                        <viewControllerLayoutGuide type="bottom" id="0k5-ij-32S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ocq-Cf-QIv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIi-S2-Zm7">
+                                <rect key="frame" x="170" y="629" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startCamera:" destination="Ngl-B9-5aW" eventType="touchUpInside" id="v1b-ae-4H8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DIi-S2-Zm7" firstAttribute="centerX" secondItem="Ocq-Cf-QIv" secondAttribute="centerX" id="McY-FA-NdL"/>
+                            <constraint firstItem="0k5-ij-32S" firstAttribute="top" secondItem="DIi-S2-Zm7" secondAttribute="bottom" constant="8" symbolic="YES" id="nfD-LY-59R"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQE-w4-yNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2122.5" y="432.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="lena" width="512" height="512"/>
+    </resources>
 </document>

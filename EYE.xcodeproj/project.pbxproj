@@ -27,6 +27,10 @@
 		15E0D90C1D612DBC0041FB01 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0D90B1D612DBC0041FB01 /* CoreVideo.framework */; };
 		15E0D90E1D612DC10041FB01 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0D90D1D612DC10041FB01 /* CoreMedia.framework */; };
 		15E0D9101D612DCC0041FB01 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0D90F1D612DCC0041FB01 /* CoreImage.framework */; };
+		15E0D9151D61392E0041FB01 /* CaptureVideoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15E0D9141D61392E0041FB01 /* CaptureVideoViewController.mm */; };
+		15E0D92B1D6364300041FB01 /* RTVideoFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15E0D92A1D6364300041FB01 /* RTVideoFilter.mm */; };
+		15E0D92D1D6364830041FB01 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0D92C1D6364830041FB01 /* OpenGLES.framework */; };
+		15E0D92F1D636D1A0041FB01 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0D92E1D636D1A0041FB01 /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,12 @@
 		15E0D90B1D612DBC0041FB01 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		15E0D90D1D612DC10041FB01 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		15E0D90F1D612DCC0041FB01 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		15E0D9131D61392E0041FB01 /* CaptureVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureVideoViewController.h; sourceTree = "<group>"; };
+		15E0D9141D61392E0041FB01 /* CaptureVideoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureVideoViewController.mm; sourceTree = "<group>"; };
+		15E0D9291D6364300041FB01 /* RTVideoFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVideoFilter.h; sourceTree = "<group>"; };
+		15E0D92A1D6364300041FB01 /* RTVideoFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTVideoFilter.mm; sourceTree = "<group>"; };
+		15E0D92C1D6364830041FB01 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		15E0D92E1D636D1A0041FB01 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15E0D92F1D636D1A0041FB01 /* GLKit.framework in Frameworks */,
+				15E0D92D1D6364830041FB01 /* OpenGLES.framework in Frameworks */,
 				15E0D9101D612DCC0041FB01 /* CoreImage.framework in Frameworks */,
 				15E0D90E1D612DC10041FB01 /* CoreMedia.framework in Frameworks */,
 				15E0D90C1D612DBC0041FB01 /* CoreVideo.framework in Frameworks */,
@@ -80,6 +92,8 @@
 		15E0D8C31D60C4520041FB01 = {
 			isa = PBXGroup;
 			children = (
+				15E0D92E1D636D1A0041FB01 /* GLKit.framework */,
+				15E0D92C1D6364830041FB01 /* OpenGLES.framework */,
 				15E0D8E61D60C4680041FB01 /* opencv2.framework */,
 				15E0D90F1D612DCC0041FB01 /* CoreImage.framework */,
 				15E0D90D1D612DC10041FB01 /* CoreMedia.framework */,
@@ -110,6 +124,8 @@
 			children = (
 				15E0D8F81D61017E0041FB01 /* 1-Static Image Feature Detection */,
 				15E0D9111D6131D20041FB01 /* 2- Take Photo */,
+				15E0D9121D61390E0041FB01 /* 3- Capture Video */,
+				15E0D9301D6397CE0041FB01 /* 4-RT Video Filtering */,
 				15E0D8CF1D60C4520041FB01 /* Supporting Files */,
 			);
 			path = EYE;
@@ -147,6 +163,24 @@
 				15E0D9011D6127650041FB01 /* TakePhotoViewController.mm */,
 			);
 			name = "2- Take Photo";
+			sourceTree = "<group>";
+		};
+		15E0D9121D61390E0041FB01 /* 3- Capture Video */ = {
+			isa = PBXGroup;
+			children = (
+				15E0D9131D61392E0041FB01 /* CaptureVideoViewController.h */,
+				15E0D9141D61392E0041FB01 /* CaptureVideoViewController.mm */,
+			);
+			name = "3- Capture Video";
+			sourceTree = "<group>";
+		};
+		15E0D9301D6397CE0041FB01 /* 4-RT Video Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				15E0D9291D6364300041FB01 /* RTVideoFilter.h */,
+				15E0D92A1D6364300041FB01 /* RTVideoFilter.mm */,
+			);
+			name = "4-RT Video Filtering";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +261,9 @@
 				15E0D8D71D60C4520041FB01 /* ViewController.mm in Sources */,
 				15E0D8D41D60C4520041FB01 /* AppDelegate.m in Sources */,
 				15E0D8F01D60F8450041FB01 /* FeatureDetector.mm in Sources */,
+				15E0D92B1D6364300041FB01 /* RTVideoFilter.mm in Sources */,
 				15E0D8D11D60C4520041FB01 /* main.m in Sources */,
+				15E0D9151D61392E0041FB01 /* CaptureVideoViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
